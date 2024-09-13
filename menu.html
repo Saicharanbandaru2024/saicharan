@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <style>
+       body {
+    background-image: url(images/cam.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+        .container {
+            background-color: invisible;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 3px 5px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #1d176e;
+            box-sizing: border-box;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: rgb(197, 29, 29);
+            padding: 5px 7px;
+            margin: 3px 0;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .scroll-message {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #b6bbbe;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: scroll 10s linear infinite;
+            font-size: 0.8rem;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(calc(-50% + 100%)); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-message">This is the eCommerce website</div>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <label for="username" style="display: inline-block; width: 80px;">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" style="display: inline-block; width: calc(100% - 80px);">
+
+            <label for="password" style="display: inline-block; width: 80px;">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" style="display: inline-block; width: calc(100% - 80px);">
+
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+
+            <button type="submit">Login</button>
+
+            <div class="message">Don't have an account? <a href="cash.html">Register</a></div>
+        </form>
+    </div>
+
+</body>
+</html>
